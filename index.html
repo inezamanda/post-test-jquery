@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // menambahkan teks
+            $(`#title`).html(`Hello, World!`);
+
+            // toggle button
+            $(`.part1 button`).click(function(){
+                $(`.part1 p`).slideToggle('slow');
+            });
+
+            // fade in
+            // $("button").click(function(){
+            //     $(`p`).fadeIn("slow");
+            // });
+
+            // hide and show
+            $(`.part1 button`).click(function(){
+                $(`.part1 button`).hide();
+            });
+            $(`.part1 button`).click(function(){
+                $("`.part1 button`").show();
+            });
+
+            // animate
+            $("button").click(function(){
+                $("div").animate({left: '250px'});
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <section class="part1">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>click me</button>
+        <p id="test">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </section>
+    <button>click me</button>
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+</html>
