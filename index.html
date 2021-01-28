@@ -8,28 +8,29 @@
         $(document).ready(function(){
             // menambahkan teks
             $(`#title`).html(`Hello, World!`);
+            
+            // fade in
+            $("#btn").click(function(){
+                $(`#p1`).fadeOut("slow");
+            });
 
             // toggle button
-            $(`.part1 button`).click(function(){
-                $(`.part1 p`).slideToggle('slow');
+            $(`#btn-1`).click(function(){
+                $(`#test`).slideToggle('slow');
             });
-
-            // fade in
-            // $("button").click(function(){
-            //     $(`p`).fadeIn("slow");
-            // });
 
             // hide and show
-            $(`.part1 button`).click(function(){
-                $(`.part1 button`).hide();
+            $(`#btn-2`).click(function(){
+                $(`.part2 p`).hide();
             });
-            $(`.part1 button`).click(function(){
-                $("`.part1 button`").show();
+
+            $(`#btn-3`).click(function(){
+                $(`.part2 p`).show();
             });
 
             // animate
-            $("button").click(function(){
-                $("div").animate({left: '250px'});
+            $(`#btn-4`).click(function(){
+                $(`.part3 div`).animate({left: '250px'});
             });
         });
     </script>
@@ -39,12 +40,20 @@
     <h1 id="title"></h1>
     <section class="part1">
         <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button>click me</button>
+        <button id="btn">click me</button>
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button id="btn-1">click me</button>
         <p id="test">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     </section>
-    <button>click me</button>
-    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <section class="part2">
+        <button id="btn-2">click me</button>
+        <button id="btn-3">click me</button>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+    <section class="part3">
+        <button id="btn-4">click me</button>
+        <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    </section>
 
 </body>
 </html>
